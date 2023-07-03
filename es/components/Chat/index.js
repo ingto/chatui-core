@@ -48,15 +48,20 @@ export var Chat = /*#__PURE__*/React.forwardRef(function (props, ref) {
       _props$Composer = props.Composer,
       Composer = _props$Composer === void 0 ? DComposer : _props$Composer;
 
-  function handleInputFocus(e) {
+   function handleInputFocus(e) {
+    console.log("触发了输入聚焦");
     if (messagesRef && messagesRef.current) {
-      messagesRef.current.scrollToEnd({
-        animated: true,
-        force: false
-      });
+      setTimeout(function() {
+        console.log("0.5秒后执行");
+        messagesRef.current.scrollToEnd({
+          animated: false,
+          force: true
+        });
+      }, 500);
     }
 
     if (onInputFocus) {
+      console.log("触发了输入聚焦2");
       onInputFocus(e);
     }
   }
