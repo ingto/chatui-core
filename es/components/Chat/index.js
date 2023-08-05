@@ -95,23 +95,24 @@ export var Chat = /*#__PURE__*/React.forwardRef(function (props, ref) {
     onScroll: onQuickReplyScroll
   }),
     //——————基于inputable的值来决定是否渲染Composer——————
-    inputable && /*#__PURE__*/React.createElement(Composer, {
-    wideBreakpoint: wideBreakpoint,
-    ref: composerRef,
-    inputType: inputType,
-    text: text,
-    inputOptions: inputOptions,
-    placeholder: placeholder,
-    onAccessoryToggle: onAccessoryToggle,
-    recorder: recorder,
-    toolbar: toolbar,
-    onToolbarClick: onToolbarClick,
-    onInputTypeChange: onInputTypeChange,
-    onFocus: handleInputFocus,
-    onChange: onInputChange,
-    onBlur: onInputBlur,
-    onSend: onSend,
-    onImageSend: onImageSend,
-    rightAction: rightAction
-  }))));
+  //   inputable && /*#__PURE__*/React.createElement(Composer, {
+  //   wideBreakpoint: wideBreakpoint,
+  //   ref: composerRef,
+  //   inputType: inputType,
+  //   text: text,
+  //   inputOptions: inputOptions,
+  //   placeholder: placeholder,
+  //   onAccessoryToggle: onAccessoryToggle,
+  //   recorder: recorder,
+  //   toolbar: toolbar,
+  //   onToolbarClick: onToolbarClick,
+  //   onInputTypeChange: onInputTypeChange,
+  //   onFocus: handleInputFocus,
+  //   onChange: onInputChange,
+  //   onBlur: onInputBlur,
+  //   onSend: onSend,
+  //   onImageSend: onImageSend,
+  //   rightAction: rightAction
+  // })
+  )));
 });
