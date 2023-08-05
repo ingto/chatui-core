@@ -62,6 +62,7 @@ export var Chat = /*#__PURE__*/React.forwardRef(function (props, ref) {
 
   //————自定义修改————
   const { inputable } = props;
+  console.log('chat_inputable:',inputable)
   //————————————————
 
   useEffect(function () {
