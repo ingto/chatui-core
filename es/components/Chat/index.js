@@ -53,6 +53,7 @@ export var Chat = /*#__PURE__*/React.forwardRef(function (props, ref) {
       messagesRef.current.scrollToEnd({
         animated: false,
         force: true
+      })
     }
 
     if (onInputFocus) {
