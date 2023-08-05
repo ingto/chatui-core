@@ -55,11 +55,14 @@ export var Chat = /*#__PURE__*/React.forwardRef(function (props, ref) {
         force: true
       })
     }
-
     if (onInputFocus) {
       onInputFocus(e);
     }
   }
+
+  //————自定义修改————
+  const { inputable } = props;
+  //————————————————
 
   useEffect(function () {
     if (isSafari()) {
@@ -89,7 +92,9 @@ export var Chat = /*#__PURE__*/React.forwardRef(function (props, ref) {
     visible: quickRepliesVisible,
     onClick: onQuickReplyClick,
     onScroll: onQuickReplyScroll
-  }), /*#__PURE__*/React.createElement(Composer, {
+  }),
+    //——————基于inputable的值来决定是否渲染Composer——————
+    inputable && /*#__PURE__*/React.createElement(Composer, {
     wideBreakpoint: wideBreakpoint,
     ref: composerRef,
     inputType: inputType,
