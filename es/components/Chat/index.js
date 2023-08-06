@@ -52,8 +52,7 @@ export var Chat = /*#__PURE__*/React.forwardRef(function (props, ref) {
     Composer = _props$Composer === void 0 ? DComposer : _props$Composer,
     _props$inputable = props.inputable,
     inputable = _props$inputable === void 0 ? true : _props$inputable,
-    _props$safetyAreaHeig = props.safetyAreaHeight,
-    safetyAreaHeight = _props$safetyAreaHeig === void 0 ? false : _props$safetyAreaHeig;
+    safetyAreaHeight = props.safetyAreaHeight;
   function handleInputFocus(e) {
     if (messagesRef && messagesRef.current) {
       messagesRef.current.scrollToEnd({
@@ -97,7 +96,20 @@ export var Chat = /*#__PURE__*/React.forwardRef(function (props, ref) {
     onBackBottomClick: onBackBottomClick
   }), /*#__PURE__*/React.createElement("div", {
     className: "ChatFooter"
-  }, renderQuickReplies ? renderQuickReplies() : /*#__PURE__*/React.createElement(QuickReplies, {
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "SafetyArea_Defulat",
+    style: {
+      height: '20px'
+    }
+  }), safetyAreaHeight &&
+  /*#__PURE__*/
+  //自定义修改：安全区域
+  React.createElement("div", {
+    className: "SafetyArea",
+    style: {
+      height: "".concat(safetyAreaHeight, "px")
+    }
+  }), renderQuickReplies ? renderQuickReplies() : /*#__PURE__*/React.createElement(QuickReplies, {
     items: quickReplies,
     visible: quickRepliesVisible,
     onClick: onQuickReplyClick,
@@ -124,13 +136,5 @@ export var Chat = /*#__PURE__*/React.forwardRef(function (props, ref) {
     onSend: onSend,
     onImageSend: onImageSend,
     rightAction: rightAction
-  })), safetyAreaHeight &&
-  /*#__PURE__*/
-  //自定义修改：安全区域
-  React.createElement("div", {
-    style: {
-      height: "".concat(safetyAreaHeight, "px")
-    },
-    className: "SafetyArea"
-  })));
+  }))));
 });
