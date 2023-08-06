@@ -1,7 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 var _excluded = ["type", "content", "children"];
-import React from 'react';
+//import React from 'react';
 
 // export interface BubbleProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'content'> {
 //   type?: string;
@@ -18,7 +18,10 @@ import React from 'react';
 //   );
 // });
 
-// import React from 'react';
+import React from 'react';
+
+// @ts-ignore
+
 export var Bubble = /*#__PURE__*/React.forwardRef(function (props, ref) {
   var _props$type = props.type,
     type = _props$type === void 0 ? 'text' : _props$type,
