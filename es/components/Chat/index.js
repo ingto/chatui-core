@@ -96,9 +96,7 @@ export var Chat = /*#__PURE__*/React.forwardRef(function (props, ref) {
     onBackBottomClick: onBackBottomClick
   }), /*#__PURE__*/React.createElement("div", {
     className: "ChatFooter"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "SafetyArea_Defulat"
-  }), safetyAreaHeight &&
+  }, safetyAreaHeight &&
   /*#__PURE__*/
   //自定义修改：安全区域
   React.createElement("div", {
