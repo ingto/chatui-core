@@ -97,10 +97,7 @@ export var Chat = /*#__PURE__*/React.forwardRef(function (props, ref) {
   }), /*#__PURE__*/React.createElement("div", {
     className: "ChatFooter"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "SafetyArea_Defulat",
-    style: {
-      height: '20px'
-    }
+    className: "SafetyArea_Defulat"
   }), safetyAreaHeight &&
   /*#__PURE__*/
   //自定义修改：安全区域
