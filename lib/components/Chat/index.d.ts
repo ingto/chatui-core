@@ -13,6 +13,10 @@ export type ChatProps = Omit<ComposerProps, 'onFocus' | 'onChange' | 'onBlur'> &
      */
     inputable?: boolean;
     /**
+     * ———————> 自定义修改：安全区高度 <——————
+     */
+    safetyAreaHeight?: number;
+    /**
      * 导航栏配置
      */
     navbar?: NavbarProps;
@@ -121,6 +125,10 @@ export declare const Chat: React.ForwardRefExoticComponent<Omit<ComposerProps, "
      * ——————> 自定义修改：决定是否渲染 Composer 组件的属性 <——————
      */
     inputable?: boolean | undefined;
+    /**
+     * ———————> 自定义修改：安全区高度 <——————
+     */
+    safetyAreaHeight?: number | undefined;
     /**
      * 导航栏配置
      */
