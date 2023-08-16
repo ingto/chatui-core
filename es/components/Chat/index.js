@@ -66,12 +66,15 @@ export var Chat = /*#__PURE__*/React.forwardRef(function (props, ref) {
   }
   useEffect(function () {
     //自定义修改：组件挂载和卸载时滚动到底部
-    if (messagesRef && messagesRef.current) {
-      messagesRef.current.scrollToEnd({
-        animated: false,
-        force: true
-      });
-    }
+    setTimeout(function () {
+      if (messagesRef && messagesRef.current) {
+        messagesRef.current.scrollToEnd({
+          animated: false,
+          force: true
+        });
+      }
+      console.log('调试部分代码已执行');
+    }, 300);
     var rootEl = document.documentElement;
     if (isSafari()) {
       rootEl.dataset.safari = '';
