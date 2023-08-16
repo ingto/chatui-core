@@ -104,12 +104,12 @@ export var Chat = /*#__PURE__*/React.forwardRef(function (props, ref) {
     style: {
       height: "".concat(safetyAreaHeight, "px")
     }
-  }), renderQuickReplies ? renderQuickReplies() : /*#__PURE__*/React.createElement(QuickReplies, {
+  }), inputable ? renderQuickReplies ? renderQuickReplies() : /*#__PURE__*/React.createElement(QuickReplies, {
     items: quickReplies,
     visible: quickRepliesVisible,
     onClick: onQuickReplyClick,
     onScroll: onQuickReplyScroll
-  }), inputable &&
+  }) : null, inputable &&
   /*#__PURE__*/
   // 自定义修改：基于 inputable 的值来决定是否渲染 Composer
   React.createElement(Composer, {
