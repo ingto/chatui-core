@@ -65,16 +65,6 @@ export var Chat = /*#__PURE__*/React.forwardRef(function (props, ref) {
     }
   }
   useEffect(function () {
-    //自定义修改1：组件挂载和卸载时滚动到底部
-    setTimeout(function () {
-      if (messagesRef && messagesRef.current) {
-        messagesRef.current.scrollToEnd({
-          animated: false,
-          force: true
-        });
-      }
-      console.log('调试部分代码1已执行');
-    }, 300);
     var rootEl = document.documentElement;
     if (isSafari()) {
       rootEl.dataset.safari = '';
@@ -85,17 +75,14 @@ export var Chat = /*#__PURE__*/React.forwardRef(function (props, ref) {
       rootEl.dataset.oldIos = '';
     }
   }, []);
-
-  //自定义修改2：组件挂载和卸载时滚动到底部
-  setTimeout(function () {
+  useEffect(function () {
     if (messagesRef && messagesRef.current) {
       messagesRef.current.scrollToEnd({
         animated: false,
         force: true
       });
     }
-    console.log('调试部分代码2已执行');
-  }, 300);
+  }, [messages]);
   return /*#__PURE__*/React.createElement(ConfigProvider, {
     locale: locale,
     locales: locales,
