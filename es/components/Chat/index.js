@@ -75,14 +75,6 @@ export var Chat = /*#__PURE__*/React.forwardRef(function (props, ref) {
       rootEl.dataset.oldIos = '';
     }
   }, []);
-  useEffect(function () {
-    if (messagesRef && messagesRef.current) {
-      messagesRef.current.scrollToEnd({
-        animated: false,
-        force: true
-      });
-    }
-  }, [messages]);
   return /*#__PURE__*/React.createElement(ConfigProvider, {
     locale: locale,
     locales: locales,
